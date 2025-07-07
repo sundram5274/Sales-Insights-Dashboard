@@ -1,8 +1,8 @@
 # 📊 Sales Insights Dashboard - Power BI Project
-🔗 Overview
+🔗 **Overview**
 This project visualizes sales performance data using Power BI. It connects to a MySQL database and an Excel file for comprehensive analysis. All data is cleaned, modeled, and visualized using Power BI's powerful features.
 
-🧱 Tech Stack
+🧱 **Tech Stack**
 Database: MySQL
 
 External File: Excel (transactions.xlsx)
@@ -11,8 +11,9 @@ BI Tool: Power BI Desktop
 
 ETL Tool: Power Query (in Power BI)
 
-✅ Steps to Run the Project
-1. 🛠️ Import SQL Dump into MySQL Workbench
+✅ ** Steps to Run the Project**
+
+1. 🛠️ **Import SQL Dump into MySQL Workbench**
 Open MySQL Workbench
 
 Create a new schema/database (e.g., sales_db)
@@ -23,7 +24,7 @@ Run the SQL script to create all tables
 
 📌 Important: Ensure the table sales_transactions is successfully created — this will be used in Power BI
 
-2. 📥 Connect Power BI to MySQL
+2. 📥 **Connect Power BI to MySQL**
 Open Power BI Desktop
 
 Click Home → Get Data → MySQL Database
@@ -38,7 +39,7 @@ Provide your MySQL username/password
 
 Click Connect to load tables like sales_transactions, products, markets, etc.
 
-3. 📎 Import Excel File
+3. 📎 **Import Excel File**
 Go to Home → Get Data → Excel
 
 Select transactions.xlsx
@@ -47,7 +48,7 @@ Load the required sheet or table
 
 📌 This file contains additional transaction data to compare/merge with the sales_transactions table
 
-4. 🧹 Perform ETL Using Power Query
+4. 🧹 **Perform ETL Using Power Query**
 Click Transform Data
 
 Clean both SQL and Excel tables:
@@ -62,7 +63,7 @@ Create relationships if needed (e.g., matching transaction_id, product_id)
 
 Optionally, merge or append the sales_transactions and Excel transactions if they contain similar or complementary data
 
-5. 🔗 Data Modeling
+5. 🔗 **Data Modeling**
 Create relationships between:
 
 sales_transactions (from MySQL)
@@ -73,7 +74,7 @@ Lookup tables like products, customers, markets
 
 Use the Manage Relationships tool in Power BI
 
-6. 📈 Create Visualizations
+6. 📈 **Create Visualizations**
 Visuals included in this dashboard:
 
 KPI cards (Total Sales, Profit, Orders)
@@ -86,7 +87,7 @@ Donut chart (Market contribution)
 
 Table comparing SQL vs Excel transactions (optional)
 
-7. 🧮 Create DAX Measures
+7. 🧮 **Create DAX Measures**
 Sample measures used:
 dax
 
@@ -94,7 +95,8 @@ Total Sales = SUM(Sales[Revenue])
 Total Profit = SUM(Sales[Profit])
 Total Orders = COUNTROWS(Sales)
 Profit Margin = DIVIDE([Total Profit], [Total Sales])
-8. 📊 Final Dashboard Layout
+
+8. 📊 **Final Dashboard Layout**
 Interactive slicers: Date, Region, Product Category
 
 Clean layout using grid system and card visuals
